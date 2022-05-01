@@ -193,6 +193,7 @@ justify-content: center;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
+width: 75%;
 }
 
 .seguridadhigiene-titulo {
@@ -222,6 +223,7 @@ justify-content: center;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
+width: 75%;
 }
 
 .medioambiente-titulo {
@@ -279,6 +281,21 @@ margin: 45px;
 display: flex;
 justify-content: space-around;
 margin-top: 55px;
+}
+
+.facebook:hover{
+    transform: scale(1.5);
+    transition: 2s;
+}
+
+.instagram:hover{
+    transform: scale(1.5);
+    transition: 2s;
+}
+
+.linkedin:hover{
+    transform: scale(1.5);
+    transition: 2s;
 }
 
 .links-footer {
