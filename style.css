@@ -12,157 +12,84 @@ text-decoration: none;
 font-family: "Roboto", sans-serif;
 }
 
-/*HABILITACION GRID*/
-
-.container {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-auto-flow: row;
-grid-template-areas:
-    "inicio-logo inicio-logo contacto-ubicacion contacto-ubicacion contacto-medios contacto-medios"
-    "inicio-logo inicio-logo contacto-ubicacion contacto-ubicacion contacto-medios contacto-medios"
-    "inicio-menu inicio-menu inicio-menu inicio-menu inicio-menu inicio-menu"
-    "carrusel carrusel carrusel carrusel carrusel carrusel"
-    "carrusel carrusel carrusel carrusel carrusel carrusel"
-    "carrusel carrusel carrusel carrusel carrusel carrusel"
-    "aplicacion aplicacion aplicacion aplicacion presupuesto presupuesto"
-    "aplicacion aplicacion aplicacion aplicacion presupuesto presupuesto"
-    "seguridadhigiene seguridadhigiene medioambiente medioambiente presupuesto presupuesto"
-    "seguridadhigiene seguridadhigiene medioambiente medioambiente presupuesto presupuesto"
-    "seguridadhigiene seguridadhigiene medioambiente medioambiente presupuesto presupuesto"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo";
-}
-
-html,
-body,
-.container {
-margin: 0;
-font-family: "Roboto", sans-serif;
-}
-
 /* INICIO */
 
-.inicio-logo {
-grid-area: inicio-logo;
-background-color: white;
+.background-inicio{
+    background-color: #f7f7f7;
 }
 
 .logo {
-width: 100%;
-height: 100%;
-object-fit: scale-down;
-}
-
-.contacto-ubicacion {
-grid-area: contacto-ubicacion;
-background-color: #f7f7f7;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.ubicacion-texto {
-display: flex;
-flex-direction: column;
+    width: 60%;
+    height: 60%;
+    object-fit: scale-down;
 }
 
 .ubicacion-logo {
-width: 20%;
-height: 20%;
+width: 10%;
+height: 10%;
 object-fit: scale-down;
 }
 
 .ubicacion-titulo {
 font-weight: bold;
 text-align: center;
+font-size: 24px;
 }
 
 .ubicacion-contenido {
 text-align: center;
 }
 
-.contacto-medios {
-grid-area: contacto-medios;
-background-color: #f7f7f7;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.medios-texto {
-display: flex;
-flex-direction: column;
-}
-
 .medios-logo {
-width: 20%;
-height: 20%;
+width: 10%;
+height: 10%;
 object-fit: scale-down;
 }
 
 .medios-telefono {
 font-weight: bold;
 text-align: center;
+font-size: 24px;
 }
 
 .medios-mail {
 text-align: center;
 }
 
-/* MENU */
+/* NAVBAR */
 
-.inicio-menu {
-grid-area: inicio-menu;
-background-color: #1bbc9b;
-display: flex;
-justify-content: space-around;
-align-items: center;
-width: 100%;
+.background-nav{
+    background-color: #1bbc9b;
 }
 
-.inicio-menu nav {
-display: flex;
-justify-content: space-around;
-align-items: center;
-list-style: none;
-width: 100%;
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    color: white;
+    font-size: 20px;
 }
 
-.inicio-menu nav ul {
-display: flex;
-justify-content: space-around;
-align-items: center;
-list-style: none;
-width: 100%;
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
 }
 
-.inicio-menu nav ul li a {
-font-weight: bold;
-color: white;
-font-size: 20px;
+.font-nav{
+    font-weight: bold;
 }
 
-.carrusel {
-grid-area: carrusel;
-background-color: black;
+/* CARRUSEL */
+
+.carousel-inner{
+    height: 500px;
 }
 
-/* INTRODUCCION */
-
-.aplicacion {
-grid-area: aplicacion;
-background-color: #f7f7f7;
-display: flex;
-justify-content: center;
+.carousel-item{
+    height: 500px;
 }
 
-.aplicacion-texto {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+/* CONTENIDO */
+
+.background-aplicacion{
+    background-color: #f7f7f7;
 }
 
 .aplicacion-titulo {
@@ -180,20 +107,8 @@ text-align: center;
 font-size: 20px;
 }
 
-/* CONTENIDO PRINCIPAL */
-
-.seguridadhigiene {
-grid-area: seguridadhigiene;
-background-color: white;
-display: flex;
-justify-content: center;
-}
-
-.seguridadhigiene-texto {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-width: 75%;
+.background-shma{
+    background-color: white;
 }
 
 .seguridadhigiene-titulo {
@@ -212,20 +127,6 @@ font-weight: bold;
 font-size: 17px;
 }
 
-.medioambiente {
-grid-area: medioambiente;
-background-color: white;
-display: flex;
-justify-content: center;
-}
-
-.medioambiente-texto {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-width: 75%;
-}
-
 .medioambiente-titulo {
 display: flex;
 justify-content: center;
@@ -242,30 +143,20 @@ font-weight: bold;
 font-size: 17px;
 }
 
-/* SOLICITUD DE PRESUPUESTO */
-
-.presupuesto {
-grid-area: presupuesto;
-background-color: #3a5371;
-display: flex;
-justify-content: center;
-align-items: start;
+.background-presupuesto{
+    background-color: #3a5371;
 }
 
 .presupuesto-titulo {
 color: white;
 font-weight: bold;
 font-size: 35px;
-margin: 5%;
 }
 
 /* FOOTER */
 
-.redes-sociales {
-grid-area: redes-sociales;
-background-color: #25272e;
-display: flex;
-flex-direction: column;
+.background-footer{
+    background-color: #25272e;
 }
 
 .redes-titulo {
@@ -298,14 +189,6 @@ margin-top: 55px;
     transition: 2s;
 }
 
-.links-footer {
-grid-area: links-footer;
-background-color: #25272e;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-}
-
 .links-titulo {
 color: white;
 font-weight: bold;
@@ -329,13 +212,6 @@ align-items: center;
 
 .links-contenido a {
 color: white;
-}
-
-.formulario-trabajo {
-grid-area: formulario-trabajo;
-background-color: #25272e;
-display: flex;
-justify-content: center;
 }
 
 .formulario-texto {
@@ -364,31 +240,8 @@ text-align: center;
 
 /* SOBRE NOSOTROS */
 
-.container-nosotros {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-auto-flow: row;
-grid-template-areas:
-    "inicio-logo inicio-logo contacto-ubicacion contacto-ubicacion contacto-medios contacto-medios"
-    "inicio-logo inicio-logo contacto-ubicacion contacto-ubicacion contacto-medios contacto-medios"
-    "inicio-menu inicio-menu inicio-menu inicio-menu inicio-menu inicio-menu"
-    "nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa"
-    "nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa nuestra-empresa"
-    "quienes-somos quienes-somos quienes-somos quienes-somos quienes-somos quienes-somos"
-    "quienes-somos quienes-somos quienes-somos quienes-somos quienes-somos quienes-somos"
-    "responsabilidad responsabilidad compromiso compromiso profesionalismo profesionalismo"
-    "responsabilidad responsabilidad compromiso compromiso profesionalismo profesionalismo"
-    "responsabilidad responsabilidad compromiso compromiso profesionalismo profesionalismo"
-    "responsabilidad responsabilidad compromiso compromiso profesionalismo profesionalismo"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo"
-    "redes-sociales redes-sociales links-footer links-footer formulario-trabajo formulario-trabajo";
-}
 
-.nuestra-empresa {
-    grid-area: nuestra-empresa;
-}
+/* NUESTRA EMPRESA */
 
 .empresa-contenido{
     display: flex;
@@ -408,6 +261,9 @@ grid-template-areas:
     color: white;
     font-size: 40px;
 }
+
+
+
 
 .quienes-somos {
     grid-area: quienes-somos;
@@ -433,6 +289,14 @@ grid-template-areas:
     width: 50%;
     text-align: center;
     padding: 20px;
+}
+
+.background-valores{
+    background-color: #f7f7f7;;
+}
+
+.titulo-valores{
+    justify-content: center;
 }
 
 .responsabilidad {
