@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/icono.ico" type="image/x-icon" />
     <title>MGN Consultores</title>
@@ -14,62 +15,78 @@
   </head>
 
   <body>
-    <div class="container-nosotros">
-      <div class="inicio-logo">
-        <img src="images/logo.jpg" alt="logo" class="logo" />
-      </div>
-
-      <div class="contacto-ubicacion">
-        <img
-          src="images/ubicacion.png"
-          alt="ubicacion-logo"
-          class="ubicacion-logo"
-        />
-        <div class="ubicacion-texto animate__animated animate__bounceInDown">
-          <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
-          <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+    <div class="container-fluid">
+      <!-- INICIO -->
+      <header class="row header">
+        <div class="col-4 logo">
+          <img src="images/logo.jpg" alt="logo" class="logo" />
         </div>
-      </div>
-
-      <div class="contacto-medios">
-        <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
-        <div class="medios-texto animate__animated animate__bounceInDown">
-          <h3 class="medios-telefono">0800 MGN 0000</h3>
-          <p class="medios-mail">contacto@mgnconsultores.com</p>
+        <div class="col-4 background-inicio ubicacion">
+          <img src="images/ubicacion.png" alt="ubicacion-logo" class="ubicacion-logo" />
+          <div class="ubicacion-texto animate__animated animate__bounceInDown">
+            <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
+            <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          </div>
         </div>
-      </div>
-
-      <div class="inicio-menu">
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="seguridadehigiene.html">Seguridad e Higiene</a>
-            </li>
-            <li>
-              <a href="medioambiente.html">Medio Ambiente</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="nuestra-empresa">
-        <div class="empresa-contenido">
-          <img src="images/empresa.jpg" alt="img-empresa" class="img-empresa" />
-          <h1 class="empresa-titulo">CONOZCA NUESTRA EMPRESA</h1>
+        <div class="col-4 background-inicio medios">
+          <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
+          <div class="medios-texto animate__animated animate__bounceInDown">
+            <h3 class="medios-telefono">0800 MGN 0000</h3>
+            <p class="medios-mail">contacto@mgnconsultores.com</p>
+          </div>
         </div>
-      </div>
+      </header>
+      
+      <!-- NAVBAR-->
+      <menu class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-xl navbar-light background-nav">
+            <div class="container-fluid font-nav">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse show" id="navbarWithDropdown">
+                <ul class="navbar-nav d-flex justify-content-around w-100">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Servicios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item seh" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
+                      <li><a class="dropdown-item ma" href="medioambiente.html">Medio Ambiente</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </menu>
 
-      <div class="quienes-somos">
-        <div class="quienes-texto">
+      <!-- NUESTRA EMPRESA -->
+      <main class="row">
+        <div class="col-12">
+          <div class="nuestra-empresa">
+            <div class="empresa-contenido">
+              <img src="images/empresa.jpg" alt="img-empresa" class="img-empresa" />
+              <h1 class="empresa-titulo">CONOZCA NUESTRA EMPRESA</h1>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- QUIENES SOMOS -->
+      <section class="row">
+        <div class="col-12">
           <div class="quienes-titulo">
             <h2>¿QUIENES SOMOS?</h2>
           </div>
@@ -81,116 +98,136 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="responsabilidad">
-        <div class="responsabilidad-texto">
-          <div class="responsabilidad-titulo">
-            <h3>- RESPONSABILIDAD</h3>
-          </div>
-          <div class="responsabilidad-contenido">
-            <p>
-              Entendemos que nuestros clientes delegan en MGN CONSULTORES
-              responsabilidades de sus propias organizaciones, y esto configura
-              un valor que preservamos en cada acción.
-            </p>
+      <!-- VALORES -->
+      <article class="row background-valores valores">
+        <div class="col-12">
+          <div class="valores-titulo animate__animated animate__zoomIn">
+            <h3 class="valores-h3">NUESTROS VALORES</h3>
           </div>
         </div>
-      </div>
-
-      <div class="compromiso">
-        <div class="compromiso-texto">
-          <div class="compromiso-titulo">
-            <h3>- COMPROMISO</h3>
+        <div class="row">
+          <div class="col-4 responsabilidad">
+            <div class="responsabilidad-titulo">
+              <h4>- RESPONSABILIDAD</h4>
+            </div>
+            <div class="responsabilidad-contenido">
+              <p>
+                Entendemos que nuestros clientes delegan en MGN CONSULTORES
+                responsabilidades de sus propias organizaciones, y esto configura
+                un valor que preservamos en cada acción.
+              </p>
+            </div>
           </div>
-          <div class="compromiso-contenido">
-            <p>
-              Creemos que para comprometernos con las necesidades de nuestros
-              clientes, debemos involucrarnos y entender sus propios negocios
-              buscando un trato personalizado como filosofía de trabajo. De esto
-              modo, se logran minimizar sus riesgos y costos laborales, en los
-              mejores tiempos y acorde al mejor costobeneficio del mercado,
-              siendo flexibles a las necesidades de cada uno sin descuidar las
-              normas igentes y sobre todo, a su personal.
-            </p>
+          <div class="col-4 compromiso">
+            <div class="compromiso-titulo">
+              <h4>- COMPROMISO</h4>
+            </div>
+            <div class="compromiso-contenido">
+              <p>
+                Creemos que para comprometernos con las necesidades de nuestros
+                clientes, debemos involucrarnos y entender sus propios negocios
+                buscando un trato personalizado como filosofía de trabajo. De esto
+                modo, se logran minimizar sus riesgos y costos laborales, en los
+                mejores tiempos y acorde al mejor costobeneficio del mercado,
+                siendo flexibles a las necesidades de cada uno sin descuidar las
+                normas igentes y sobre todo, a su personal.
+              </p>
+            </div>
+          </div>
+          <div class="col-4 profesionalismo">
+            <div class="profesionalismo-titulo">
+              <h4>- PROFESIONALISMO</h4>
+            </div>
+            <div class="profesionalismo-contenido">
+              <p>
+                Apostamos al éxito y el crecimiento como resultado del desarrollo
+                y la excelencia de nuestro equipo profesional.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="profesionalismo">
-        <div class="profesionalismo-texto">
-          <div class="profesionalismo-titulo">
-            <h3>- PROFESIONALISMO</h3>
+      <!-- FOOTER -->
+      <footer class="row background-footer footer">
+        <div class="col-4">
+          <h5 class="redes-titulo">REDES SOCIALES</h5>
+          <div class="redes-logo">
+            <img
+              src="images/facebook.png"
+              width="50px"
+              height="50px"
+              alt="facebook"
+              class="facebook"
+            />
+            <img
+              src="images/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagram"
+              class="instagram"
+            />
+            <img
+              src="images/linkedin.png"
+              width="50px"
+              height="50px"
+              alt="linkedIn"
+              class="linkedin"
+            />
           </div>
-          <div class="profesionalismo-contenido">
-            <p>
-              Apostamos al éxito y el crecimiento como resultado del desarrollo
-              y la excelencia de nuestro equipo profesional.
-            </p>
+        </div>
+
+        <div class="col-4">
+          <h5 class="links-titulo">LINKS IMPORTANTES</h5>
+          <div class="links-contenido">
+            <nav>
+              <ul>
+                <li>
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="sobrenosotros.html">Sobre Nosotros</a>
+                </li>
+                <li>
+                  <a href="seguridadehigiene.html">Seguridad e Higiene</a>
+                </li>
+                <li>
+                  <a href="medioambiente.html">Medio Ambiente</a>
+                </li>
+                <li>
+                  <a href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </div>
 
-      <div class="redes-sociales">
-        <h5 class="redes-titulo">REDES SOCIALES</h5>
-        <div class="redes-logo">
-          <img
-            src="images/facebook.png"
-            width="50px"
-            height="50px"
-            alt="facebook"
-            class="facebook"
-          />
-          <img
-            src="images/instagram.png"
-            width="50px"
-            height="50px"
-            alt="instagram"
-            class="instagram"
-          />
-          <img
-            src="images/linkedin.png"
-            width="50px"
-            height="50px"
-            alt="linkedIn"
-            class="linkedin"
-          />
+        <div class="col-4">
+          <div class="formulario-texto">
+            <div>
+              <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
+            </div>
+            <div class="form-texto">
+              <p class="formulario-contenido">
+                Envianos un mail y nos pondremos en contacto
+              </p>
+            </div>
+            <div class="form-input">
+              <label for="formControlInput" class="form-label"></label>
+              <input type="email" class="form-control" id="formControlInput" placeholder="name@example.com">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="links-footer">
-        <h5 class="links-titulo">LINKS IMPORTANTES</h5>
-        <div class="links-contenido">
-          <nav>
-            <ul>
-              <li>
-                <a href="index.html">Inicio</a>
-              </li>
-              <li>
-                <a href="sobrenosotros.html">Sobre Nosotros</a>
-              </li>
-              <li>
-                <a href="seguridadehigiene.html">Seguridad e Higiene</a>
-              </li>
-              <li>
-                <a href="medioambiente.html">Medio Ambiente</a>
-              </li>
-              <li>
-                <a href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="formulario-trabajo">
-        <div class="formulario-texto">
-          <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
-          <p class="formulario-contenido">
-            Envianos un mail y nos pondremos en contacto
-          </p>
-        </div>
-      </div>
+      </footer>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  
+  
   </body>
 </html>

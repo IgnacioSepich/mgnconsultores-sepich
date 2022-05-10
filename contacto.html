@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/icono.ico" type="image/x-icon" />
     <title>MGN Consultores</title>
@@ -14,57 +15,100 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="inicio-logo">
-        <img src="images/logo.jpg" alt="logo" class="logo" />
-      </div>
-
-      <div class="contacto-ubicacion">
-        <img
-          src="images/ubicacion.png"
-          alt="ubicacion-logo"
-          class="ubicacion-logo"
-        />
-        <div class="ubicacion-texto animate__animated animate__bounceInDown">
+    <div class="container-fluid">
+      <!-- INICIO -->
+      <header class="row align-items-center justify-content-center">
+        <div class="col-4">
+          <img src="images/logo.jpg" alt="logo" class="logo" />
+        </div>
+        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+          <img src="images/ubicacion.png" alt="ubicacion-logo" class="ubicacion-logo" />
           <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
           <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
         </div>
-      </div>
-
-      <div class="contacto-medios">
-        <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
-        <div class="medios-texto animate__animated animate__bounceInDown">
+        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+          <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
           <h3 class="medios-telefono">0800 MGN 0000</h3>
           <p class="medios-mail">contacto@mgnconsultores.com</p>
         </div>
-      </div>
+      </header>
+      
+      <!-- NAVBAR-->
+      <menu class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-xl navbar-light background-nav">
+            <div class="container-fluid font-nav">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse show justify-content-around" id="navbarWithDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Servicios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
+                      <li><a class="dropdown-item" href="medioambiente.html">Medio Ambiente</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </menu>
 
-      <div class="inicio-menu">
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="seguridadehigiene.html">Seguridad e Higiene</a>
-            </li>
-            <li>
-              <a href="medioambiente.html">Medio Ambiente</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <!-- CARRUSEL -->
+      <section class="row-carrusel">
+        <div class="col-12">
+          <div id="carouselWithCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/seguridad1.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-sm-block">
+                  <h5>SEGURIDAD E HIGIENE</h5>
+                  <p>Optimice las condiciones y el desempeño del personal.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/medioambiente1.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-sm-block">
+                  <h5>MEDIO AMBIENTE</h5>
+                  <p>Mejore la labor ambiental de su empresa.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselWithCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselWithCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <div class="carrusel"></div>
+      <!-- CONTENIDO -->
 
-      <div class="aplicacion">
-        <div class="aplicacion-texto">
+      <section class="row">
+        <main class="col-8 background-aplicacion">
           <h1 class="aplicacion-titulo">APLICACION</h1>
           <p class="aplicacion-contenido">
             MGN CONSULTORES diagnóstica, planifica e implementa eficazmente los
@@ -73,100 +117,104 @@
             fijando metas, diseñando estrategias y ejecutando planes desde una
             perspectiva amplia e innovadora en:
           </p>
-        </div>
-      </div>
+          <article class="row">
+            <div class="col-6 background-shma">
+              <h4 class="seguridadhigiene-titulo">SEGURIDAD E HIGIENE</h4>
+              <p class="seguridadhigiene-contenido">
+                Nuestros servicios se adaptan a las necesidades y tamaño de nuestros
+                clientes, independientemente del rubro al que pertenezca, pudiendo
+                llevar a cabo todas las funciones de un Departamento de Higiene y
+                Seguridad en forma externa, o complementar las actividades de las
+                Gerencias Internas con prestaciones puntuales de valor agregado.
+              </p>
+            </div>
+            <div class="col-6 background-shma">
+              <h4 class="medioambiente-titulo">MEDIO AMBIENTE</h4>
+              <p class="medioambiente-contenido">
+                Investigamos y controlamos las variables ambientales presentes en
+                las empresas, para establecer, caracterizar y dimensionar los
+                aspectos e impactos ambientales. Brindamos asesoramiento relacionado
+                con el cuidado del ambiente, los vertidos de efluentes, la
+                caracterización de emisiones gaseosas, el ordenamiento y disposición
+                de residuos, y demás requisitos legales.
+              </p>
+            </div>
+          </article>
+        </main>
+        <aside class="col-4 background-presupuesto d-flex justify-content-center">
+          <h1 class="presupuesto-titulo">SOLICITE SU PRESUPUESTO</h1>
+        </aside>
+      </section>
 
-      <div class="seguridadhigiene">
-        <div class="seguridadhigiene-texto">
-          <h4 class="seguridadhigiene-titulo">SEGURIDAD E HIGIENE</h4>
-          <p class="seguridadhigiene-contenido">
-            Nuestros servicios se adaptan a las necesidades y tamaño de nuestros
-            clientes, independientemente del rubro al que pertenezca, pudiendo
-            llevar a cabo todas las funciones de un Departamento de Higiene y
-            Seguridad en forma externa, o complementar las actividades de las
-            Gerencias Internas con prestaciones puntuales de valor agregado.
-          </p>
+      <!-- FOOTER -->
+      <footer class="row background-footer">
+        <div class="col-4">
+          <h5 class="redes-titulo">REDES SOCIALES</h5>
+          <div class="redes-logo">
+            <img
+              src="images/facebook.png"
+              width="50px"
+              height="50px"
+              alt="facebook"
+              class="facebook"
+            />
+            <img
+              src="images/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagram"
+              class="instagram"
+            />
+            <img
+              src="images/linkedin.png"
+              width="50px"
+              height="50px"
+              alt="linkedIn"
+              class="linkedin"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="medioambiente">
-        <div class="medioambiente-texto">
-          <h4 class="medioambiente-titulo">MEDIO AMBIENTE</h4>
-          <p class="medioambiente-contenido">
-            Investigamos y controlamos las variables ambientales presentes en
-            las empresas, para establecer, caracterizar y dimensionar los
-            aspectos e impactos ambientales. Brindamos asesoramiento relacionado
-            con el cuidado del ambiente, los vertidos de efluentes, la
-            caracterización de emisiones gaseosas, el ordenamiento y disposición
-            de residuos, y demás requisitos legales.
-          </p>
+        <div class="col-4">
+          <h5 class="links-titulo">LINKS IMPORTANTES</h5>
+          <div class="links-contenido">
+            <nav>
+              <ul>
+                <li>
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="sobrenosotros.html">Sobre Nosotros</a>
+                </li>
+                <li>
+                  <a href="seguridadehigiene.html">Seguridad e Higiene</a>
+                </li>
+                <li>
+                  <a href="medioambiente.html">Medio Ambiente</a>
+                </li>
+                <li>
+                  <a href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
 
-      <div class="presupuesto">
-        <h1 class="presupuesto-titulo">SOLICITE SU PRESUPUESTO</h1>
-      </div>
-
-      <div class="redes-sociales">
-        <h5 class="redes-titulo">REDES SOCIALES</h5>
-        <div class="redes-logo">
-          <img
-            src="images/facebook.png"
-            width="50px"
-            height="50px"
-            alt="facebook"
-            class="facebook"
-          />
-          <img
-            src="images/instagram.png"
-            width="50px"
-            height="50px"
-            alt="instagram"
-            class="instagram"
-          />
-          <img
-            src="images/linkedin.png"
-            width="50px"
-            height="50px"
-            alt="linkedIn"
-            class="linkedin"
-          />
+        <div class="col-4">
+          <div class="formulario-texto">
+            <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
+            <p class="formulario-contenido">
+              Envianos un mail y nos pondremos en contacto
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="links-footer">
-        <h5 class="links-titulo">LINKS IMPORTANTES</h5>
-        <div class="links-contenido">
-          <nav>
-            <ul>
-              <li>
-                <a href="index.html">Inicio</a>
-              </li>
-              <li>
-                <a href="sobrenosotros.html">Sobre Nosotros</a>
-              </li>
-              <li>
-                <a href="seguridadehigiene.html">Seguridad e Higiene</a>
-              </li>
-              <li>
-                <a href="medioambiente.html">Medio Ambiente</a>
-              </li>
-              <li>
-                <a href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="formulario-trabajo">
-        <div class="formulario-texto">
-          <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
-          <p class="formulario-contenido">
-            Envianos un mail y nos pondremos en contacto
-          </p>
-        </div>
-      </div>
+      </footer>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  
+  
   </body>
 </html>
