@@ -17,19 +17,23 @@
   <body>
     <div class="container-fluid">
       <!-- INICIO -->
-      <header class="row align-items-center justify-content-center">
-        <div class="col-4">
+      <header class="row header">
+        <div class="col-4 logo">
           <img src="images/logo.jpg" alt="logo" class="logo" />
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-4 background-inicio ubicacion">
           <img src="images/ubicacion.png" alt="ubicacion-logo" class="ubicacion-logo" />
-          <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
-          <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          <div class="ubicacion-texto animate__animated animate__bounceInDown">
+            <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
+            <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          </div>
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-4 background-inicio medios">
           <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
-          <h3 class="medios-telefono">0800 MGN 0000</h3>
-          <p class="medios-mail">contacto@mgnconsultores.com</p>
+          <div class="medios-texto animate__animated animate__bounceInDown">
+            <h3 class="medios-telefono">0800 MGN 0000</h3>
+            <p class="medios-mail">contacto@mgnconsultores.com</p>
+          </div>
         </div>
       </header>
       
@@ -41,8 +45,8 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse show justify-content-around" id="navbarWithDropdown">
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse show" id="navbarWithDropdown">
+                <ul class="navbar-nav d-flex justify-content-around w-100">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                   </li>
@@ -54,8 +58,8 @@
                       Servicios
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
-                      <li><a class="dropdown-item" href="medioambiente.html">Medio Ambiente</a></li>
+                      <li><a class="dropdown-item seh" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
+                      <li><a class="dropdown-item ma" href="medioambiente.html">Medio Ambiente</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -75,21 +79,20 @@
             <ol class="carousel-indicators">
               <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="0" class="active"></li>
               <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="1"></li>
-              <li data-bs-target="#carouselWithCaptions" data-bs-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="images/seguridad1.jpg" class="d-block w-100" alt="Slide 1">
                 <div class="carousel-caption d-none d-sm-block">
-                  <h5>SEGURIDAD E HIGIENE</h5>
-                  <p>Optimice las condiciones y el desempeño del personal.</p>
+                  <h5 class="carrusel-h5">SEGURIDAD E HIGIENE</h5>
+                  <p class="carrusel-p">Optimice las condiciones y el desempeño del personal.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="images/medioambiente1.jpg" class="d-block w-100" alt="Slide 2">
                 <div class="carousel-caption d-none d-sm-block">
-                  <h5>MEDIO AMBIENTE</h5>
-                  <p>Mejore la labor ambiental de su empresa.</p>
+                  <h5 class="carrusel-h5">MEDIO AMBIENTE</h5>
+                  <p class="carrusel-p">Mejore la labor ambiental de su empresa.</p>
                 </div>
               </div>
             </div>
@@ -141,13 +144,74 @@
             </div>
           </article>
         </main>
-        <aside class="col-4 background-presupuesto d-flex justify-content-center">
+        <aside class="col-4 background-presupuesto presupuesto">
           <h1 class="presupuesto-titulo">SOLICITE SU PRESUPUESTO</h1>
+          <!-- Note: A custom script is used to activate validation:
+
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+              }, false)
+            })
+          -->
+          <form class="fila-presupuesto g-3 needs-validation" novalidate="">
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip01" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="validationTooltip01" value="" required="">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip02" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="validationTooltip02" value="" required="">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltipUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required="">
+                <div class="invalid-tooltip">
+                  Please choose a unique and valid username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="validationTooltip03" class="form-label">Pais</label>
+              <input type="text" class="form-control" id="validationTooltip03" required="">
+              <div class="invalid-tooltip">
+                Please provide a valid Pais.
+              </div>
+            </div>
+            <div class="col-md-3 position-relative">
+              <label for="validationTooltip04" class="form-label">Ciudad</label>
+              <select class="form-select" id="validationTooltip04" required="">
+                <option selected="" disabled="" value="">Elegir...</option>
+                <option>...</option>
+              </select>
+              <div class="invalid-tooltip">
+                Please select a valid Ciudad.
+              </div>
+            </div>
+            <div class="col-12 boton-presupuesto">
+              <button class="btn btn-primary" type="submit">ENVIAR FORMULARIO</button>
+            </div>
+          </form>
         </aside>
       </section>
 
       <!-- FOOTER -->
-      <footer class="row background-footer">
+      <footer class="row background-footer footer">
         <div class="col-4">
           <h5 class="redes-titulo">REDES SOCIALES</h5>
           <div class="redes-logo">
@@ -202,10 +266,19 @@
 
         <div class="col-4">
           <div class="formulario-texto">
-            <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
-            <p class="formulario-contenido">
-              Envianos un mail y nos pondremos en contacto
-            </p>
+            <div>
+              <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
+            </div>
+            <div class="form-texto">
+              <p class="formulario-contenido">
+                Envianos un mail y nos pondremos en contacto
+              </p>
+            </div>
+            <div class="form-input">
+              <label for="formControlInput" class="form-label"></label>
+              <input type="email" class="form-control" id="formControlInput" placeholder="name@example.com">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
       </footer>

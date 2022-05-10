@@ -16,21 +16,24 @@
 
   <body>
     <div class="container-fluid">
-
       <!-- INICIO -->
-      <header class="row align-items-center justify-content-center">
-        <div class="col-4">
+      <header class="row header">
+        <div class="col-4 logo">
           <img src="images/logo.jpg" alt="logo" class="logo" />
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-4 background-inicio ubicacion">
           <img src="images/ubicacion.png" alt="ubicacion-logo" class="ubicacion-logo" />
-          <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
-          <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          <div class="ubicacion-texto animate__animated animate__bounceInDown">
+            <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
+            <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          </div>
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-4 background-inicio medios">
           <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
-          <h3 class="medios-telefono">0800 MGN 0000</h3>
-          <p class="medios-mail">contacto@mgnconsultores.com</p>
+          <div class="medios-texto animate__animated animate__bounceInDown">
+            <h3 class="medios-telefono">0800 MGN 0000</h3>
+            <p class="medios-mail">contacto@mgnconsultores.com</p>
+          </div>
         </div>
       </header>
       
@@ -42,8 +45,8 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse show justify-content-around" id="navbarWithDropdown">
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse show" id="navbarWithDropdown">
+                <ul class="navbar-nav d-flex justify-content-around w-100">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                   </li>
@@ -55,8 +58,8 @@
                       Servicios
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
-                      <li><a class="dropdown-item" href="medioambiente.html">Medio Ambiente</a></li>
+                      <li><a class="dropdown-item seh" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
+                      <li><a class="dropdown-item ma" href="medioambiente.html">Medio Ambiente</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -98,14 +101,16 @@
       </section>
 
       <!-- VALORES -->
-      <article class="row background-valores">
+      <article class="row background-valores valores">
         <div class="col-12">
-          <h3>NUESTROS VALORES</h3>
+          <div class="valores-titulo animate__animated animate__zoomIn">
+            <h3 class="valores-h3">NUESTROS VALORES</h3>
+          </div>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 responsabilidad">
             <div class="responsabilidad-titulo">
-              <h3>- RESPONSABILIDAD</h3>
+              <h4>- RESPONSABILIDAD</h4>
             </div>
             <div class="responsabilidad-contenido">
               <p>
@@ -115,9 +120,9 @@
               </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-4 compromiso">
             <div class="compromiso-titulo">
-              <h3>- COMPROMISO</h3>
+              <h4>- COMPROMISO</h4>
             </div>
             <div class="compromiso-contenido">
               <p>
@@ -131,9 +136,9 @@
               </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-4 profesionalismo">
             <div class="profesionalismo-titulo">
-              <h3>- PROFESIONALISMO</h3>
+              <h4>- PROFESIONALISMO</h4>
             </div>
             <div class="profesionalismo-contenido">
               <p>
@@ -146,7 +151,7 @@
       </article>
 
       <!-- FOOTER -->
-      <footer class="row background-footer">
+      <footer class="row background-footer footer">
         <div class="col-4">
           <h5 class="redes-titulo">REDES SOCIALES</h5>
           <div class="redes-logo">
@@ -201,10 +206,19 @@
 
         <div class="col-4">
           <div class="formulario-texto">
-            <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
-            <p class="formulario-contenido">
-              Envianos un mail y nos pondremos en contacto
-            </p>
+            <div>
+              <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
+            </div>
+            <div class="form-texto">
+              <p class="formulario-contenido">
+                Envianos un mail y nos pondremos en contacto
+              </p>
+            </div>
+            <div class="form-input">
+              <label for="formControlInput" class="form-label"></label>
+              <input type="email" class="form-control" id="formControlInput" placeholder="name@example.com">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
       </footer>
