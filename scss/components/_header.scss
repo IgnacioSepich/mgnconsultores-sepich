@@ -1,0 +1,77 @@
+@import "../base/_variables";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+
+    .logo{
+        height: 85%;
+        object-fit: scale-down;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .background-inicio{
+        background-color: $lightgrey;
+    }
+
+    .ubicacion{
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100%;
+    
+        .ubicacion-logo {
+            width: 45px;
+            height: 45px;
+            object-fit: scale-down;
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+    
+        .ubicacion-texto {
+            .ubicacion-titulo {
+                font-weight: bold;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .ubicacion-contenido {
+                text-align: center;
+            }
+        }
+    }
+
+    
+    .medios{
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100%;
+    
+        .medios-logo {
+            width: 45px;
+            height: 45px;
+            object-fit: scale-down;
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+
+        .medios-texto{
+            .medios-telefono {
+                font-weight: bold;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .medios-mail {
+                text-align: center;
+            }
+        }
+    }
+}
+
+

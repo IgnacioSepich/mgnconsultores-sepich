@@ -1,0 +1,123 @@
+@import "../base/_estilosGenerales";
+
+
+
+@import "../components/_header";
+
+@import "../components/_navbar";
+
+    /* CARRUSEL */
+    
+    .carousel-inner{
+        height: 500px;
+    }
+    
+    .carousel-item{
+        height: 500px;
+    }
+    
+    .carrusel-h5{
+        font-weight: bold;
+        font-size: 40px;
+    }
+    
+    .carrusel-p{
+        font-size: 20px;
+    }
+    
+    /* CONTENIDO */
+    
+    .background-aplicacion{
+        background-color: $lightgrey
+    }
+    
+    .aplicacion-titulo {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 20px;
+    }
+    
+    .aplicacion-contenido {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    }
+    
+    .background-shma{
+        background-color: white;
+    }
+    
+    .seguridadhigiene-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        padding: 20px;
+    }
+    
+    .seguridadhigiene-contenido {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: $lightgreen;
+        font-weight: bold;
+        font-size: 17px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+    
+    .medioambiente-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        padding: 20px;
+    }
+    
+    .medioambiente-contenido {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: $lightgreen;
+        font-weight: bold;
+        font-size: 17px;
+        padding: 0px 30px 10px;
+    }
+    
+    /* PRESUPUESTO */
+    
+    .background-presupuesto{
+        background-color: #3a5371;
+    }
+    
+    .presupuesto-titulo {
+        color: white;
+        font-weight: bold;
+        font-size: 35px;
+        padding: 20px;
+    }
+    
+    .fila-presupuesto{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 50px;
+    }
+    
+    .presupuesto{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boton-presupuesto{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+@import "../components/footer";
