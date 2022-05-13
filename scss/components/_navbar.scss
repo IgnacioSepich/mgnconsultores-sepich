@@ -1,0 +1,29 @@
+.background-nav{
+    background-color: $lightgreen;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
+}
+
+.font-nav{
+    font-weight: bold;
+}
+
+.seh{
+    font-size: 20px;
+    font-weight: bold;
+    color: $lightgreen;
+}
+
+.ma{
+    font-size: 20px;
+    font-weight: bold;
+    color: $lightgreen;
+}
