@@ -1,4 +1,6 @@
 @import "../base/_variables";
+@import "../base/extends";
+@import "../base/mixin";
 
 .header {
     display: flex;
@@ -9,9 +11,7 @@
     .logo{
         height: 85%;
         object-fit: scale-down;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
     }
 
     .background-inicio{
@@ -19,17 +19,11 @@
     }
 
     .ubicacion{
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
+        @extend %flex;
         height: 100%;
     
         .ubicacion-logo {
-            width: 45px;
-            height: 45px;
-            object-fit: scale-down;
-            margin-right: 15px;
-            margin-bottom: 5px;
+            @include logo (45px, 45px, scale-down, 15px, 5px)
         }
     
         .ubicacion-texto {
@@ -47,17 +41,11 @@
 
     
     .medios{
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
+        @extend %flex;
         height: 100%;
     
         .medios-logo {
-            width: 45px;
-            height: 45px;
-            object-fit: scale-down;
-            margin-right: 15px;
-            margin-bottom: 5px;
+            @include logo (45px, 45px, scale-down, 15px, 5px)
         }
 
         .medios-texto{

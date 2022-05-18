@@ -21,6 +21,12 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+.medioambiente-titulo, .seguridadhigiene-titulo, .aplicacion-titulo, .header .medios, .header .ubicacion, .header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -30,17 +36,11 @@ a {
 .header .logo {
   height: 85%;
   object-fit: scale-down;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .header .background-inicio {
   background-color: #f7f7f7;
 }
 .header .ubicacion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 .header .ubicacion .ubicacion-logo {
@@ -59,9 +59,6 @@ a {
   text-align: center;
 }
 .header .medios {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 .header .medios .medios-logo {
@@ -135,9 +132,6 @@ a {
 
 .aplicacion-titulo {
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 40px;
   padding: 20px;
 }
@@ -154,9 +148,6 @@ a {
 }
 
 .seguridadhigiene-titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 25px;
   padding: 20px;
 }
@@ -173,9 +164,6 @@ a {
 }
 
 .medioambiente-titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 25px;
   padding: 20px;
 }
@@ -219,6 +207,13 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
 }
 
 .background-footer {
@@ -274,7 +269,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.footer .links-contenido .links-contenido nav .links-contenido nav ul li a {
+.footer .links-contenido .links-contenido nav .links-contenido nav ul .links-contenido nav ul li .links-contenido nav ul li a {
   color: white;
   text-decoration: none;
 }
@@ -305,14 +300,10 @@ a {
   width: 75%;
 }
 .footer .formulario-texto .form-input .btn-primary {
-  color: #fff;
   background-color: #1bbc9b;
-  border-color: #1bbc9b;
-}
-.footer .formulario-texto .form-input .btn-primary {
-  color: #fff;
-  background-color: #1bbc9b;
-  border-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
 }
 
 /* SOBRE NOSOTROS */
