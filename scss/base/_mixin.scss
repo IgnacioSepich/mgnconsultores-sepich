@@ -1,0 +1,9 @@
+
+@mixin logo ($width, $height, $object-fit, $margin-right, $margin-bottom){
+    width: $width;
+    height: $height;
+    object-fit: $object-fit;
+    margin-right: $margin-right;
+    margin-bottom: $margin-bottom;
+}
+

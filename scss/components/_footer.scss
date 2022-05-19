@@ -1,4 +1,5 @@
 @import "../base/_variables";
+@import "../base/mapas";
 
 .background-footer{
     background-color: $darkgrey;
@@ -46,7 +47,6 @@
         font-size: 20px;
         padding: 30px;
     }
-
     .links-contenido {
         color: white;
         line-height: 35px;
@@ -54,15 +54,14 @@
         display: flex;
         justify-content: center;
 
-        .links-contenido nav {
+        > nav {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .links-contenido nav ul li a {
+            > ul > li > a {
                 color: white;
-                text-decoration: none;
+                text-decoration: none
             }
         }
     }
@@ -100,15 +99,22 @@
             }
 
             .btn-primary {
-                color: #fff;
-                background-color: $lightgreen;
-                border-color: $lightgreen;
-            }
-            
-            .btn-primary {
-                color: #fff;
-                background-color: $lightgreen;
-                border-color: $lightgreen;
+                background-color: map-get($boton, bg-boton);
+                border: map-get($boton, border-boton);
+                color: map-get($boton , color-text);
+                font-size: map-get($boton, font-size);
+                outline: none !important;
+                box-shadow: none;
+                &:active{
+                    outline: none;
+                    box-shadow: none;
+                    background-color: black;
+                }
+                &:hover{
+                    outline: none;
+                    background-color: red;
+                    box-shadow: none;
+                }
             }
         }
     }

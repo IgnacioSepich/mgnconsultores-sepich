@@ -1,10 +1,7 @@
-@import "../base/_estilosGenerales";
-
-
-
+@import "../base/mapas";
 @import "../components/_header";
-
 @import "../components/_navbar";
+@import "../components/footer";
 
     /* CARRUSEL */
     
@@ -33,11 +30,9 @@
     
     .aplicacion-titulo {
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 40px;
     padding: 20px;
+    @extend %flex;
     }
     
     .aplicacion-contenido {
@@ -52,9 +47,7 @@
     }
     
     .seguridadhigiene-titulo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
         font-size: 25px;
         padding: 20px;
     }
@@ -71,9 +64,7 @@
     }
     
     .medioambiente-titulo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
         font-size: 25px;
         padding: 20px;
     }
@@ -120,4 +111,11 @@
         margin-top: 30px;
     }
 
-@import "../components/footer";
+    .btn-primary {
+        background-color: map-get($boton, bg-boton);
+        border: map-get($boton, border-boton);
+        color: map-get($boton , color-text);
+        font-size: map-get($boton, font-size);
+    }
+
+
