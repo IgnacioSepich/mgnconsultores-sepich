@@ -47,7 +47,6 @@
         font-size: 20px;
         padding: 30px;
     }
-
     .links-contenido {
         color: white;
         line-height: 35px;
@@ -55,19 +54,14 @@
         display: flex;
         justify-content: center;
 
-        .links-contenido nav {
+        > nav {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .links-contenido nav ul {
-                .links-contenido nav ul li {
-                    .links-contenido nav ul li a {
-                        color: white;
-                        text-decoration: none;
-                    }
-                }
+            > ul > li > a {
+                color: white;
+                text-decoration: none
             }
         }
     }
@@ -109,6 +103,18 @@
                 border: map-get($boton, border-boton);
                 color: map-get($boton , color-text);
                 font-size: map-get($boton, font-size);
+                outline: none !important;
+                box-shadow: none;
+                &:active{
+                    outline: none;
+                    box-shadow: none;
+                    background-color: black;
+                }
+                &:hover{
+                    outline: none;
+                    background-color: red;
+                    box-shadow: none;
+                }
             }
         }
     }
