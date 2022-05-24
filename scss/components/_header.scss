@@ -1,4 +1,5 @@
 @import "../base/_variables";
+@import "../base/mapas";
 @import "../base/extends";
 @import "../base/mixin";
 
@@ -6,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 175px;
+    height: 125px;
 
     .logo{
         height: 85%;
@@ -23,18 +24,20 @@
         height: 100%;
     
         .ubicacion-logo {
-            @include logo (45px, 45px, scale-down, 15px, 5px)
+            @include logo (45px, 35px, scale-down, 15px, 0px)
         }
     
         .ubicacion-texto {
             .ubicacion-titulo {
                 font-weight: bold;
                 text-align: center;
-                font-size: 24px;
+                font-size: 17px;
             }
             
             .ubicacion-contenido {
                 text-align: center;
+                font-size: 13px;
+                margin: 0px;
             }
         }
     }
@@ -45,26 +48,60 @@
         height: 100%;
     
         .medios-logo {
-            @include logo (45px, 45px, scale-down, 15px, 5px)
+            @include logo (45px, 35px, scale-down, 15px, 0px)
         }
 
         .medios-texto{
             .medios-telefono {
                 font-weight: bold;
                 text-align: center;
-                font-size: 24px;
+                font-size: 17px;
             }
             
             .medios-mail {
                 text-align: center;
+                font-size: 13px;
+                margin: 0px;
             }
         }
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
     .header{
         height: auto;
+    }
+    
+    .logo {
+        width: 50%;
+    }
+    
+    .header .ubicacion .ubicacion-logo{
+        width: 35px;
+        height: 35px;
+    }
+
+    .header .ubicacion .ubicacion-texto .ubicacion-titulo{
+        padding-top: 20px;
+    }
+
+    .header .ubicacion .ubicacion-texto .ubicacion-contenido{
+        padding-bottom: 20px;
+    }
+    
+    .header .medios .medios-logo{
+        margin-top: 0px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .header .medios .medios-texto .medios-telefono{
+        padding-top: 20px;
+    }
+
+    .header .medios .medios-texto .medios-mail{
+        padding-bottom: 20px;
     }
 }
 

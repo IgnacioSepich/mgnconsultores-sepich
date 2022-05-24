@@ -1,0 +1,110 @@
+@import "../components/_header";
+@import "../components/_navbar";
+@import "../components/footer";
+@import "../base/_variables";
+
+.main-mab {
+    height: auto;
+    display: flex;
+}
+
+.mab-asunto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mab-titulo {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.mab-contenido{
+    font-size: 14px;
+    padding: 20px 60px 0px 60px;
+    text-align: center;
+}
+
+.mab-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-ambiente{
+    border-style: outset;
+    margin: 20px 0px;
+}
+
+
+/* CONTENIDO */
+
+.ser-ben{
+    background-color: $lightgrey;
+}
+
+.servicios-contenido{
+    display: flex;
+    justify-content: center;
+}
+
+.servicios-titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    text-shadow: $lightgreen 0 3px;
+}
+
+.servicios-lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+    font-size: 13px;
+    line-height: 3;
+
+    .servicios-lista1{
+        list-style-type: circle;
+    }
+}
+
+.beneficios-titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    text-shadow: $lightgreen 0 3px;
+}
+
+.beneficios-lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+    font-size: 13px;
+    line-height: 3;
+
+    .beneficios-lista1{
+        list-style-type: circle;
+        
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    .main-seg {
+        height: 600px;
+    }
+
+    .seg-titulo {
+        font-size: 30px;
+    }
+
+    .seg-contenido{
+        margin: 0;
+    }
+
+    .servicios-lista{
+        padding: 20px 5px 0px 5px;
+    }
+}
