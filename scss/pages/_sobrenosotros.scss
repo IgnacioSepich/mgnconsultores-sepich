@@ -1,0 +1,182 @@
+@import "../components/_header";
+@import "../components/_navbar";
+@import "../components/footer";
+@import "../base/_variables";
+
+.empresa-contenido{
+    @extend %flex;
+}
+
+.img-empresa{
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.empresa-titulo{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+}
+
+/* ¿Quienes Somos? */
+
+.quienes-somos {
+    grid-area: quienes-somos;
+    background-color: white;
+    display: flex;
+}
+
+.quienes-titulo h2{
+    font-size: 25px;
+    padding: 20px;
+    display: flex; 
+    justify-content: center;
+    margin: 0px;
+}
+
+.quienes-contenido{
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 40px;
+    display: flex;
+    justify-content:center;
+}
+
+/* Nuestros Valores */
+
+.background-valores{
+    background-color: $lightgrey;;
+}
+
+.valores-titulo{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 20px 0px;
+}
+
+.valores-h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.valores-h3:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 8px;
+    width: 200px;
+    height: 5px;
+    background: $lightgreen;
+    left: 47%;
+    margin-left: -47px;
+}
+
+/* Responsabilidad */
+
+.responsabilidad {
+    background-color: $lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+
+.responsabilidad-titulo h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 30px 0px;
+    font-size: 20px;
+}
+
+.responsabilidad-contenido{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px;
+}
+
+/* Compromiso */
+
+.compromiso {
+    background-color: $lightgrey;;
+    display: flex;
+    flex-direction: column;
+}
+
+.compromiso-titulo h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 30px 0px;
+    font-size: 20px;
+}
+
+.compromiso-contenido{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px;
+}
+
+/* Profesionalismo */
+
+.profesionalismo {
+    background-color: $lightgrey;;
+    display: flex;
+    flex-direction: column;
+}
+
+.profesionalismo-titulo h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 30px 0px;
+    font-size: 20px;
+}
+
+.profesionalismo-contenido{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px;
+}
+
+.row, .row > *, .container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    .empresa-titulo{
+        font-size: 35px;
+    }
+
+    .valores-h3 {
+        font-size: 35px;
+    }
+
+    .valores-h3:after{
+        left: 41%;
+        margin-left: -41px;
+    }
+
+    .responsabilidad-titulo h4{
+        padding: 30px 0px 5px 0px;
+        margin: 0px;
+    }
+
+    .compromiso-titulo h4{
+        padding: 30px 0px 5px 0px;
+        margin: 0px;
+    }
+
+    .profesionalismo-titulo h4{
+        padding: 30px 0px 5px 0px;
+        margin: 0px;
+    }
+}

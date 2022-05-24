@@ -1,5 +1,17 @@
 @charset "UTF-8";
-.medioambiente-titulo, .seguridadhigiene-titulo, .aplicacion-titulo, .header .medios, .header .ubicacion, .header .logo {
+/*RESETEO UNIVERSAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.empresa-contenido, .medioambiente-titulo, .seguridadhigiene-titulo, .aplicacion-titulo, .header .medios, .header .ubicacion, .header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 175px;
+  height: 125px;
 }
 .header .logo {
   height: 85%;
@@ -23,55 +35,96 @@
 }
 .header .ubicacion .ubicacion-logo {
   width: 45px;
-  height: 45px;
+  height: 35px;
   object-fit: scale-down;
   margin-right: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .header .ubicacion .ubicacion-texto .ubicacion-titulo {
   font-weight: bold;
   text-align: center;
-  font-size: 24px;
+  font-size: 17px;
 }
 .header .ubicacion .ubicacion-texto .ubicacion-contenido {
   text-align: center;
+  font-size: 13px;
+  margin: 0px;
 }
 .header .medios {
   height: 100%;
 }
 .header .medios .medios-logo {
   width: 45px;
-  height: 45px;
+  height: 35px;
   object-fit: scale-down;
   margin-right: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .header .medios .medios-texto .medios-telefono {
   font-weight: bold;
   text-align: center;
-  font-size: 24px;
+  font-size: 17px;
 }
 .header .medios .medios-texto .medios-mail {
   text-align: center;
+  font-size: 13px;
+  margin: 0px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
   .header {
     height: auto;
   }
+
+  .logo {
+    width: 50%;
+  }
+
+  .header .ubicacion .ubicacion-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-titulo {
+    padding-top: 20px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-contenido {
+    padding-bottom: 20px;
+  }
+
+  .header .medios .medios-logo {
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .medios .medios-texto .medios-telefono {
+    padding-top: 20px;
+  }
+
+  .header .medios .medios-texto .medios-mail {
+    padding-bottom: 20px;
+  }
 }
+.empresa-contenido, .medioambiente-titulo, .seguridadhigiene-titulo, .aplicacion-titulo, .header .logo, .header .ubicacion, .header .medios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .background-nav {
   background-color: #1bbc9b;
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .font-nav {
@@ -79,15 +132,36 @@
 }
 
 .seh {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #1bbc9b;
 }
 
 .ma {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #1bbc9b;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .row, .row > *, .container-fluid {
+    width: 100%;
+  }
+  .row .navbar > .container-fluid, .row > * .navbar > .container-fluid, .container-fluid .navbar > .container-fluid {
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .row .navbar-light .navbar-toggler, .row > * .navbar-light .navbar-toggler, .container-fluid .navbar-light .navbar-toggler {
+    margin-left: 15px;
+  }
+  .row .navbar-nav, .row > * .navbar-nav, .container-fluid .navbar-nav {
+    padding-left: 15px;
+  }
+}
+.empresa-contenido, .medioambiente-titulo, .seguridadhigiene-titulo, .aplicacion-titulo, .header .logo, .header .ubicacion, .header .medios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-footer {
@@ -95,14 +169,14 @@
 }
 
 .footer {
-  height: 300px;
+  height: auto;
 }
 .footer .redes-titulo {
   color: white;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
   padding: 30px;
 }
 .footer .redes-logo {
@@ -127,13 +201,13 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   padding: 30px;
 }
 .footer .links-contenido {
   color: white;
   line-height: 35px;
-  font-size: 17px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
 }
@@ -150,7 +224,7 @@
 .footer .formulario-texto .formulario-titulo {
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,37 +235,38 @@
 }
 .footer .formulario-texto .form-texto .formulario-contenido {
   color: white;
-  font-size: 17px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 .footer .formulario-texto .form-input {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .footer .formulario-texto .form-input .form-control {
-  width: 75%;
+  width: 50%;
+  margin-right: 10px;
 }
 .footer .formulario-texto .form-input .btn-primary {
   background-color: #1bbc9b;
   border: 2px solid #f7f7f7;
   color: white;
   font-size: 1rem;
-  outline: none !important;
-  box-shadow: none;
-}
-.footer .formulario-texto .form-input .btn-primary:active {
-  outline: none;
-  box-shadow: none;
-  background-color: black;
 }
 .footer .formulario-texto .form-input .btn-primary:hover {
-  outline: none;
-  background-color: red;
-  box-shadow: none;
+  background-color: blue;
 }
 
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .footer .formulario-texto .form-input {
+    padding-bottom: 30px;
+  }
+
+  .footer .links-titulo {
+    padding: 80px 0px 30px;
+  }
+}
 /* CARRUSEL */
 .carousel-inner {
   height: 500px;
@@ -201,7 +276,7 @@
   height: 500px;
 }
 
-.carrusel-h5 {
+.carrusel-h1 {
   font-weight: bold;
   font-size: 40px;
 }
@@ -217,7 +292,7 @@
 
 .aplicacion-titulo {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   padding: 20px;
 }
 
@@ -225,7 +300,8 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 13px;
+  padding: 10px 25px;
 }
 
 .background-shma {
@@ -233,7 +309,7 @@
 }
 
 .seguridadhigiene-titulo {
-  font-size: 25px;
+  font-size: 20px;
   padding: 20px;
 }
 
@@ -243,13 +319,13 @@
   text-align: center;
   color: #1bbc9b;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 13px;
   padding-bottom: 10px;
   padding-left: 20px;
 }
 
 .medioambiente-titulo {
-  font-size: 25px;
+  font-size: 20px;
   padding: 20px;
 }
 
@@ -259,7 +335,7 @@
   text-align: center;
   color: #1bbc9b;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 13px;
   padding: 0px 30px 10px;
 }
 
@@ -271,21 +347,27 @@
 .presupuesto-titulo {
   color: white;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   padding: 20px;
+  margin: 0;
 }
 
 .fila-presupuesto {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 0px 0px 20px 0px;
+  width: 100%;
 }
 
 .presupuesto {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.position-relative {
+  margin: 10px 10px 3px 10px;
 }
 
 .boton-presupuesto {
@@ -301,29 +383,322 @@
   font-size: 1rem;
 }
 
-/*RESETEO UNIVERSAL*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.form-label {
+  padding: 5px;
+  margin: 0px;
+  font-size: 13px;
 }
 
-a {
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .carousel-inner {
+    height: 250px;
+  }
 
-/* SOBRE NOSOTROS */
-/* Nuestra Empresa */
-.empresa-contenido {
+  .carousel-item {
+    height: 250px;
+  }
+
+  .seguridadhigiene-contenido {
+    padding: 0px 30px 0px;
+  }
+
+  .carrusel-h1 {
+    font-size: 30px;
+  }
+
+  .carrusel-p {
+    font-size: 15px;
+  }
+
+  .aplicacion-titulo {
+    font-size: 30px;
+    margin: 0px;
+  }
+
+  .presupuesto-titulo {
+    padding: 20px 0px 0px;
+  }
+
+  .fila-presupuesto {
+    padding: 20px;
+  }
+
+  .form-label {
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  .position-relative {
+    width: 60%;
+  }
+
+  .footer .formulario-texto .form-input {
+    justify-content: center;
+  }
+
+  .footer .formulario-texto .form-input .form-control {
+    width: 50%;
+  }
+}
+.empresa-contenido, .header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+.header .logo {
+  height: 85%;
+  object-fit: scale-down;
+}
+.header .background-inicio {
+  background-color: #f7f7f7;
+}
+.header .ubicacion {
+  height: 100%;
+}
+.header .ubicacion .ubicacion-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-contenido {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+.header .medios {
+  height: 100%;
+}
+.header .medios .medios-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .medios .medios-texto .medios-telefono {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .medios .medios-texto .medios-mail {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header {
+    height: auto;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .header .ubicacion .ubicacion-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-titulo {
+    padding-top: 20px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-contenido {
+    padding-bottom: 20px;
+  }
+
+  .header .medios .medios-logo {
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .medios .medios-texto .medios-telefono {
+    padding-top: 20px;
+  }
+
+  .header .medios .medios-texto .medios-mail {
+    padding-bottom: 20px;
+  }
+}
+.empresa-contenido, .header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-nav {
+  background-color: #1bbc9b;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.font-nav {
+  font-weight: bold;
+}
+
+.seh {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+.ma {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .row, .row > *, .container-fluid {
+    width: 100%;
+  }
+  .row .navbar > .container-fluid, .row > * .navbar > .container-fluid, .container-fluid .navbar > .container-fluid {
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .row .navbar-light .navbar-toggler, .row > * .navbar-light .navbar-toggler, .container-fluid .navbar-light .navbar-toggler {
+    margin-left: 15px;
+  }
+  .row .navbar-nav, .row > * .navbar-nav, .container-fluid .navbar-nav {
+    padding-left: 15px;
+  }
+}
+.empresa-contenido, .header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-footer {
+  background-color: #25272e;
+}
+
+.footer {
+  height: auto;
+}
+.footer .redes-titulo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .redes-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+}
+.footer .redes-logo .facebook:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .instagram:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .linkedin:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .links-titulo {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .links-contenido {
+  color: white;
+  line-height: 35px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+.footer .links-contenido > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links-contenido > nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.footer .formulario-texto .formulario-titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.footer .formulario-texto .form-texto {
+  padding: 10px;
+}
+.footer .formulario-texto .form-texto .formulario-contenido {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer .formulario-texto .form-input {
+  display: flex;
+  justify-content: center;
+}
+.footer .formulario-texto .form-input .form-control {
+  width: 50%;
+  margin-right: 10px;
+}
+.footer .formulario-texto .form-input .btn-primary {
+  background-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
+}
+.footer .formulario-texto .form-input .btn-primary:hover {
+  background-color: blue;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .footer .formulario-texto .form-input {
+    padding-bottom: 30px;
+  }
+
+  .footer .links-titulo {
+    padding: 80px 0px 30px;
+  }
+}
 .img-empresa {
   width: 100vw;
-  height: 34vh;
+  height: 30vh;
   object-fit: cover;
 }
 
@@ -341,17 +716,18 @@ a {
   display: flex;
 }
 
-.quienes-titulo {
-  font-size: 32px;
+.quienes-titulo h2 {
+  font-size: 25px;
   padding: 20px;
   display: flex;
   justify-content: center;
+  margin: 0px;
 }
 
 .quienes-contenido {
-  font-size: 20px;
+  font-size: 13px;
   text-align: center;
-  padding: 20px;
+  padding: 10px 40px;
   display: flex;
   justify-content: center;
 }
@@ -391,18 +767,19 @@ a {
   flex-direction: column;
 }
 
-.responsabilidad-titulo {
+.responsabilidad-titulo h4 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0px 30px 0px;
+  font-size: 20px;
 }
 
 .responsabilidad-contenido {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
   padding: 20px;
 }
 
@@ -413,18 +790,19 @@ a {
   flex-direction: column;
 }
 
-.compromiso-titulo {
+.compromiso-titulo h4 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0px 30px 0px;
+  font-size: 20px;
 }
 
 .compromiso-contenido {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
   padding: 20px;
 }
 
@@ -435,18 +813,19 @@ a {
   flex-direction: column;
 }
 
-.profesionalismo-titulo {
+.profesionalismo-titulo h4 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0px 30px 0px;
+  font-size: 20px;
 }
 
 .profesionalismo-contenido {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
   padding: 20px;
 }
 
@@ -455,461 +834,1055 @@ a {
   margin: 0 !important;
 }
 
-/* MEDIA QUERY PHONE */
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .container-fluid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .empresa-titulo {
+    font-size: 35px;
   }
 
-  /* INICIO-PHONE */
+  .valores-h3 {
+    font-size: 35px;
+  }
+
+  .valores-h3:after {
+    left: 41%;
+    margin-left: -41px;
+  }
+
+  .responsabilidad-titulo h4 {
+    padding: 30px 0px 5px 0px;
+    margin: 0px;
+  }
+
+  .compromiso-titulo h4 {
+    padding: 30px 0px 5px 0px;
+    margin: 0px;
+  }
+
+  .profesionalismo-titulo h4 {
+    padding: 30px 0px 5px 0px;
+    margin: 0px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+.header .logo {
+  height: 85%;
+  object-fit: scale-down;
+}
+.header .background-inicio {
+  background-color: #f7f7f7;
+}
+.header .ubicacion {
+  height: 100%;
+}
+.header .ubicacion .ubicacion-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-contenido {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+.header .medios {
+  height: 100%;
+}
+.header .medios .medios-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .medios .medios-texto .medios-telefono {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .medios .medios-texto .medios-mail {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
   .header {
-    display: flex;
-    flex-direction: column;
+    height: auto;
   }
 
   .logo {
+    width: 50%;
+  }
+
+  .header .ubicacion .ubicacion-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-titulo {
+    padding-top: 20px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-contenido {
+    padding-bottom: 20px;
+  }
+
+  .header .medios .medios-logo {
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .medios .medios-texto .medios-telefono {
+    padding-top: 20px;
+  }
+
+  .header .medios .medios-texto .medios-mail {
+    padding-bottom: 20px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-nav {
+  background-color: #1bbc9b;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.font-nav {
+  font-weight: bold;
+}
+
+.seh {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+.ma {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .row, .row > *, .container-fluid {
     width: 100%;
-    height: 40%;
-    object-fit: scale-down;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-
-  .ubicacion-texto {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .ubicacion-logo {
-    width: 5%;
-    height: 5%;
-    object-fit: scale-down;
-  }
-
-  .ubicacion-titulo {
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-  }
-
-  .ubicacion-contenido {
-    text-align: center;
-    font-size: 11px;
-  }
-
-  .contacto-medios {
-    grid-area: contacto-medios;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .medios-texto {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .medios-logo {
-    width: 5%;
-    height: 5%;
-    object-fit: scale-down;
-  }
-
-  .medios-telefono {
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-  }
-
-  .medios-mail {
-    text-align: center;
-    font-size: 11px;
-  }
-
-  /* CARRUSEL-PHONE */
-  .carrusel {
-    grid-area: carrusel;
-    height: 200px;
-  }
-
-  /* MENU-PHONE */
-  .inicio-menu {
-    grid-area: inicio-menu;
-    background-color: #1bbc9b;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  .row .navbar > .container-fluid, .row > * .navbar > .container-fluid, .container-fluid .navbar > .container-fluid {
+    align-items: flex-start;
     padding: 5px;
   }
+  .row .navbar-light .navbar-toggler, .row > * .navbar-light .navbar-toggler, .container-fluid .navbar-light .navbar-toggler {
+    margin-left: 15px;
+  }
+  .row .navbar-nav, .row > * .navbar-nav, .container-fluid .navbar-nav {
+    padding-left: 15px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .inicio-menu nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    width: 100%;
+.background-footer {
+  background-color: #25272e;
+}
+
+.footer {
+  height: auto;
+}
+.footer .redes-titulo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .redes-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+}
+.footer .redes-logo .facebook:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .instagram:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .linkedin:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .links-titulo {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .links-contenido {
+  color: white;
+  line-height: 35px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+.footer .links-contenido > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links-contenido > nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.footer .formulario-texto .formulario-titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.footer .formulario-texto .form-texto {
+  padding: 10px;
+}
+.footer .formulario-texto .form-texto .formulario-contenido {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer .formulario-texto .form-input {
+  display: flex;
+  justify-content: center;
+}
+.footer .formulario-texto .form-input .form-control {
+  width: 50%;
+  margin-right: 10px;
+}
+.footer .formulario-texto .form-input .btn-primary {
+  background-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
+}
+.footer .formulario-texto .form-input .btn-primary:hover {
+  background-color: blue;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .footer .formulario-texto .form-input {
+    padding-bottom: 30px;
   }
 
-  .inicio-menu nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    width: 100%;
+  .footer .links-titulo {
+    padding: 80px 0px 30px;
+  }
+}
+.main-seg {
+  height: auto;
+  display: flex;
+}
+
+.seg-asunto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.seg-titulo {
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.seg-contenido {
+  font-size: 14px;
+  padding: 20px 60px 0px 60px;
+  text-align: center;
+}
+
+.seg-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-seguridad {
+  border-style: outset;
+  margin: 20px 0px;
+}
+
+/* CONTENIDO */
+.ser-ben {
+  background-color: #f7f7f7;
+}
+
+.servicios-titulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  text-shadow: #1bbc9b 0 3px;
+}
+
+.servicios-lista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 0px 20px;
+  font-size: 13px;
+  line-height: 3;
+}
+.servicios-lista .servicios-lista1 {
+  list-style-type: circle;
+}
+.servicios-lista .servicios-lista2 {
+  list-style-type: circle;
+}
+
+.beneficios-titulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  text-shadow: #1bbc9b 0 3px;
+}
+
+.beneficios-lista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 0px 20px;
+  font-size: 13px;
+  line-height: 3;
+}
+.beneficios-lista .beneficios-lista1 {
+  list-style-type: circle;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .main-seg {
+    height: 600px;
   }
 
-  .inicio-menu nav ul li a {
-    font-weight: bold;
-    color: white;
-    font-size: 13px;
-  }
-
-  /* INTRODUCCION-PHONE */
-  .aplicacion {
-    grid-area: aplicacion;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-
-  .aplicacion-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .aplicacion-titulo {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    padding: 10px;
-  }
-
-  .aplicacion-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-  }
-
-  /* CONTENIDO PRINCIPAL-PHONE */
-  .seguridadhigiene {
-    grid-area: seguridadhigiene;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-
-  .seguridadhigiene-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .seguridadhigiene-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .seguridadhigiene-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: #1bbc9b;
-    font-weight: bold;
-    font-size: 12px;
-  }
-
-  .medioambiente {
-    grid-area: medioambiente;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-
-  .medioambiente-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .medioambiente-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .medioambiente-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: #1bbc9b;
-    font-weight: bold;
-    font-size: 12px;
-  }
-
-  /* SOLICITUD DE PRESUPUESTO */
-  .presupuesto {
-    grid-area: presupuesto;
-    background-color: #3a5371;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 300px;
-    width: 100%;
-  }
-
-  .presupuesto-titulo {
-    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    margin: 5%;
-  }
-
-  /* FOOTER-PHONE */
-  .redes-sociales {
-    grid-area: redes-sociales;
-    background-color: #25272e;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 200px;
-  }
-
-  .redes-titulo {
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-    margin: 30px;
-  }
-
-  .redes-logo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .links-footer {
-    grid-area: links-footer;
-    background-color: #25272e;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 200px;
-  }
-
-  .links-titulo {
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    font-size: 15px;
-    margin: 30px;
-  }
-
-  .links-contenido {
-    color: white;
-    list-style-position: inside;
-    line-height: 35px;
-    font-size: 12px;
-  }
-
-  .links-contenido nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .links-contenido a {
-    color: white;
-  }
-
-  .formulario-trabajo {
-    grid-area: formulario-trabajo;
-    background-color: #25272e;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .formulario-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    height: 200px;
-  }
-
-  .formulario-titulo {
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-  }
-
-  .formulario-contenido {
-    color: white;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* SOBRE NOSOTROS-PHONE */
-  .container-nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nuestra-empresa {
-    grid-area: nuestra-empresa;
-  }
-
-  .empresa-contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img-empresa {
-    width: 100vw;
-    height: 34vh;
-    object-fit: cover;
-  }
-
-  .empresa-titulo {
-    position: absolute;
-    font-weight: bold;
-    color: white;
+  .seg-titulo {
     font-size: 30px;
   }
 
-  .quienes-somos {
-    grid-area: quienes-somos;
-    background-color: white;
-    display: flex;
+  .seg-contenido {
+    margin: 0;
   }
 
-  .quienes-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  .servicios-lista {
+    padding: 20px 5px 0px 5px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+.header .logo {
+  height: 85%;
+  object-fit: scale-down;
+}
+.header .background-inicio {
+  background-color: #f7f7f7;
+}
+.header .ubicacion {
+  height: 100%;
+}
+.header .ubicacion .ubicacion-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-contenido {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+.header .medios {
+  height: 100%;
+}
+.header .medios .medios-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .medios .medios-texto .medios-telefono {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .medios .medios-texto .medios-mail {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header {
+    height: auto;
   }
 
-  .quienes-titulo {
-    font-size: 20px;
-    padding: 15px;
-  }
-
-  .quienes-contenido {
-    font-size: 15px;
+  .logo {
     width: 50%;
-    text-align: center;
-    padding: 20px;
   }
 
-  .responsabilidad {
-    grid-area: responsabilidad;
-    background-color: #f7f7f7;
-    display: flex;
+  .header .ubicacion .ubicacion-logo {
+    width: 35px;
+    height: 35px;
   }
 
-  .responsabilidad-texto {
-    display: flex;
+  .header .ubicacion .ubicacion-texto .ubicacion-titulo {
+    padding-top: 20px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-contenido {
+    padding-bottom: 20px;
+  }
+
+  .header .medios .medios-logo {
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .medios .medios-texto .medios-telefono {
+    padding-top: 20px;
+  }
+
+  .header .medios .medios-texto .medios-mail {
+    padding-bottom: 20px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-nav {
+  background-color: #1bbc9b;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.font-nav {
+  font-weight: bold;
+}
+
+.seh {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+.ma {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .row, .row > *, .container-fluid {
+    width: 100%;
+  }
+  .row .navbar > .container-fluid, .row > * .navbar > .container-fluid, .container-fluid .navbar > .container-fluid {
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .row .navbar-light .navbar-toggler, .row > * .navbar-light .navbar-toggler, .container-fluid .navbar-light .navbar-toggler {
+    margin-left: 15px;
+  }
+  .row .navbar-nav, .row > * .navbar-nav, .container-fluid .navbar-nav {
+    padding-left: 15px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-footer {
+  background-color: #25272e;
+}
+
+.footer {
+  height: auto;
+}
+.footer .redes-titulo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .redes-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+}
+.footer .redes-logo .facebook:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .instagram:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .linkedin:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .links-titulo {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .links-contenido {
+  color: white;
+  line-height: 35px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+.footer .links-contenido > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links-contenido > nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.footer .formulario-texto .formulario-titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.footer .formulario-texto .form-texto {
+  padding: 10px;
+}
+.footer .formulario-texto .form-texto .formulario-contenido {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer .formulario-texto .form-input {
+  display: flex;
+  justify-content: center;
+}
+.footer .formulario-texto .form-input .form-control {
+  width: 50%;
+  margin-right: 10px;
+}
+.footer .formulario-texto .form-input .btn-primary {
+  background-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
+}
+.footer .formulario-texto .form-input .btn-primary:hover {
+  background-color: blue;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .footer .formulario-texto .form-input {
+    padding-bottom: 30px;
+  }
+
+  .footer .links-titulo {
+    padding: 80px 0px 30px;
+  }
+}
+.main-mab {
+  height: auto;
+  display: flex;
+}
+
+.mab-asunto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mab-titulo {
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.mab-contenido {
+  font-size: 14px;
+  padding: 20px 60px 0px 60px;
+  text-align: center;
+}
+
+.mab-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-ambiente {
+  border-style: outset;
+  margin: 20px 0px;
+}
+
+/* CONTENIDO */
+.ser-ben {
+  background-color: #f7f7f7;
+}
+
+.servicios-contenido {
+  display: flex;
+  justify-content: center;
+}
+
+.servicios-titulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  text-shadow: #1bbc9b 0 3px;
+}
+
+.servicios-lista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 0px 20px;
+  font-size: 13px;
+  line-height: 3;
+}
+.servicios-lista .servicios-lista1 {
+  list-style-type: circle;
+}
+
+.beneficios-titulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  text-shadow: #1bbc9b 0 3px;
+}
+
+.beneficios-lista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 0px 20px;
+  font-size: 13px;
+  line-height: 3;
+}
+.beneficios-lista .beneficios-lista1 {
+  list-style-type: circle;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .main-seg {
+    height: 600px;
+  }
+
+  .seg-titulo {
+    font-size: 30px;
+  }
+
+  .seg-contenido {
+    margin: 0;
+  }
+
+  .servicios-lista {
+    padding: 20px 5px 0px 5px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+.header .logo {
+  height: 85%;
+  object-fit: scale-down;
+}
+.header .background-inicio {
+  background-color: #f7f7f7;
+}
+.header .ubicacion {
+  height: 100%;
+}
+.header .ubicacion .ubicacion-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .ubicacion .ubicacion-texto .ubicacion-contenido {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+.header .medios {
+  height: 100%;
+}
+.header .medios .medios-logo {
+  width: 45px;
+  height: 35px;
+  object-fit: scale-down;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+.header .medios .medios-texto .medios-telefono {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.header .medios .medios-texto .medios-mail {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header {
+    height: auto;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .header .ubicacion .ubicacion-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-titulo {
+    padding-top: 20px;
+  }
+
+  .header .ubicacion .ubicacion-texto .ubicacion-contenido {
+    padding-bottom: 20px;
+  }
+
+  .header .medios .medios-logo {
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .medios .medios-texto .medios-telefono {
+    padding-top: 20px;
+  }
+
+  .header .medios .medios-texto .medios-mail {
+    padding-bottom: 20px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-nav {
+  background-color: #1bbc9b;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.font-nav {
+  font-weight: bold;
+}
+
+.seh {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+.ma {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1bbc9b;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .row, .row > *, .container-fluid {
+    width: 100%;
+  }
+  .row .navbar > .container-fluid, .row > * .navbar > .container-fluid, .container-fluid .navbar > .container-fluid {
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .row .navbar-light .navbar-toggler, .row > * .navbar-light .navbar-toggler, .container-fluid .navbar-light .navbar-toggler {
+    margin-left: 15px;
+  }
+  .row .navbar-nav, .row > * .navbar-nav, .container-fluid .navbar-nav {
+    padding-left: 15px;
+  }
+}
+.header .logo, .header .ubicacion, .header .medios, .aplicacion-titulo, .seguridadhigiene-titulo, .medioambiente-titulo, .empresa-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-footer {
+  background-color: #25272e;
+}
+
+.footer {
+  height: auto;
+}
+.footer .redes-titulo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .redes-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+}
+.footer .redes-logo .facebook:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .instagram:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .redes-logo .linkedin:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.footer .links-titulo {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}
+.footer .links-contenido {
+  color: white;
+  line-height: 35px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+.footer .links-contenido > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links-contenido > nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.footer .formulario-texto .formulario-titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.footer .formulario-texto .form-texto {
+  padding: 10px;
+}
+.footer .formulario-texto .form-texto .formulario-contenido {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer .formulario-texto .form-input {
+  display: flex;
+  justify-content: center;
+}
+.footer .formulario-texto .form-input .form-control {
+  width: 50%;
+  margin-right: 10px;
+}
+.footer .formulario-texto .form-input .btn-primary {
+  background-color: #1bbc9b;
+  border: 2px solid #f7f7f7;
+  color: white;
+  font-size: 1rem;
+}
+.footer .formulario-texto .form-input .btn-primary:hover {
+  background-color: blue;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .footer .formulario-texto .form-input {
+    padding-bottom: 30px;
+  }
+
+  .footer .links-titulo {
+    padding: 80px 0px 30px;
+  }
+}
+.contacto {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.img-contacto {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.asunto-contacto {
+  padding: 50px 0px;
+}
+
+.asunto-contacto:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.logo-contacto {
+  width: 45px;
+  height: 45px;
+  object-fit: scale-down;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.titulo-contacto {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.contenido-contacto {
+  text-align: center;
+  font-size: 13px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  /*     .header .ubicacion{
+          display: none;
+      }
+
+      .header .medios{
+          display: none;
+      } */
+  .contacto {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .responsabilidad-titulo {
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .responsabilidad-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 70%;
-    font-size: 13px;
-  }
-
-  .compromiso {
-    grid-area: compromiso;
     background-color: #f7f7f7;
-    display: flex;
   }
 
-  .compromiso-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .compromiso-titulo {
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .compromiso-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 70%;
-    font-size: 13px;
-  }
-
-  .profesionalismo {
-    grid-area: profesionalismo;
-    background-color: #f7f7f7;
-    display: flex;
-  }
-
-  .profesionalismo-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profesionalismo-titulo {
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .profesionalismo-contenido {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 70%;
-    font-size: 13px;
-    margin-bottom: 50px;
+  .asunto-contacto {
+    padding: 20px 0px;
   }
 }

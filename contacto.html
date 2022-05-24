@@ -4,45 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/icono.ico" type="image/x-icon" />
-    <title>MGN Consultores</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Meta description -->
+    <meta name="description"
+    content="Nuestros servicios se adaptan a las necesidades y tamaño de nuestros clientes, pudiendo llevar a cabo todas las funciones de un Departamento de Higiene y Seguridad en forma externa">
+
+    <!-- Meta keywords -->
+    <meta name="keywords" content="seguridad e higiene en el trabajo, seg e hig, seguridad y salud laboral, seguridad y salud ocupacional, siso, syso, hise, medio ambiente en el trabajo, medio ambiente laboral, ISO 45001, ISO 14001, impacto ambiental empresarial, riesgo de incendio, ergonomia, gestion de residuos">
+
+    <!-- Open graph -->
+    <!-- type -->
+    <meta property:'og:type' content="Consultora">
+    <!-- title -->
+    <meta property:'og:title' content="MGN Consultores | Seguridad, Higiene y Medio Ambiente Laboral">
+    <!-- url -->
+    <meta property:'og:url' content="http://127.0.0.1:5500/index.html">
+    <!-- image -->
+    <meta property:'og:image' content="http://127.0.0.1:5500/images/seguridad1.jpg">
+    <!-- description -->
+    <meta property:'og:description' content="Nuestros servicios se adaptan a las necesidades y tamaño de nuestros clientes, pudiendo llevar a cabo todas las funciones de un Departamento de Higiene y Seguridad en forma externa">
+
+    <!-- Title -->
+    <title>MGN Consultores | Seguridad, Higiene y Medio Ambiente Laboral</title>
+
   </head>
 
   <body>
     <div class="container-fluid">
       <!-- INICIO -->
-      <header class="row align-items-center justify-content-center">
-        <div class="col-4">
-          <img src="images/logo.jpg" alt="logo" class="logo" />
+      <header class="row header">
+        <div class="col-12 col-md-4 logo">
+          <img src="images/logo.jpg" alt="logo empresarial" class="logo" />
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-12 col-md-4 background-inicio ubicacion">
           <img src="images/ubicacion.png" alt="ubicacion-logo" class="ubicacion-logo" />
-          <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
-          <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          <div class="ubicacion-texto animate__animated animate__bounceInDown">
+            <h3 class="ubicacion-titulo">OFICINA CENTRAL</h3>
+            <p class="ubicacion-contenido">Av. Corrientes 500 - CABA</p>
+          </div>
         </div>
-        <div class="col-4 animate__animated animate__bounceInDown background-inicio">
+        <div class="col-12 col-md-4 background-inicio medios">
           <img src="images/medios.png" alt="medios-logo" class="medios-logo" />
-          <h3 class="medios-telefono">0800 MGN 0000</h3>
-          <p class="medios-mail">contacto@mgnconsultores.com</p>
+          <div class="medios-texto animate__animated animate__bounceInDown">
+            <h3 class="medios-telefono">0800 MGN 0000</h3>
+            <p class="medios-mail">contacto@mgnconsultores.com</p>
+          </div>
         </div>
       </header>
       
       <!-- NAVBAR-->
       <menu class="row">
-        <div class="col-12">
+        <div class="col-12 menu-inicio">
           <nav class="navbar navbar-expand-xl navbar-light background-nav">
             <div class="container-fluid font-nav">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse show justify-content-around" id="navbarWithDropdown">
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse show" id="navbarWithDropdown">
+                <ul class="navbar-nav d-flex justify-content-around w-100">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                   </li>
@@ -54,8 +85,8 @@
                       Servicios
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
-                      <li><a class="dropdown-item" href="medioambiente.html">Medio Ambiente</a></li>
+                      <li><a class="dropdown-item seh" href="seguridadehigiene.html">Seguridad e Higiene</a></li>
+                      <li><a class="dropdown-item ma" href="medioambiente.html">Medio Ambiente</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -68,8 +99,125 @@
         </div>
       </menu>
 
+
+      <!-- CONTACTO -->
+      <main class="row">
+        <div class="col-12">
+          <img src="images/contacto1.jpg" alt="img-empresa" class="img-contacto" />
+        </div>
+      </main>
+
+      <section class="row">
+        <div class="contacto">
+          <div class="col-12 col-md-3 asunto-contacto">
+            <img src="images/ubicacion.png" alt="logo-contacto" class="logo-contacto" />
+            <div class="contacto-texto">
+              <h3 class="titulo-contacto">OFICINA CENTRAL</h3>
+              <p class="contenido-contacto">Av. Corrientes 500 - CABA</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 asunto-contacto">
+            <img src="images/medios.png" alt="telefono-logo" class="logo-contacto" />
+            <div class="contacto-texto">
+              <h3 class="titulo-contacto">TELEFONO</h3>
+              <p class="contenido-contacto">0800 MGN 0000</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 asunto-contacto">
+            <img src="images/email.png" alt="email-logo" class="logo-contacto" />
+            <div class="contacto-texto">
+              <h3 class="titulo-contacto">EMAIL</h3>
+              <p class="contenido-contacto">contacto@mgnconsultores.com</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 asunto-contacto">
+            <img src="images/whatsapp.png" alt="whatsapp-logo" class="logo-contacto" />
+            <div class="contacto-texto">
+              <h3 class="titulo-contacto">WHATSAPP</h3>
+              <p class="contenido-contacto">+54 9 11 25318901</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="row">
+        <div class="col-12">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0295029494578!2d-58.37592458523342!3d-34.6034154649882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacd1040c557%3A0x125f430a9903cc12!2sAv.%20Corrientes%20500%2C%20C1043%20AAR%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1653406329349!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- PRESUPUESTO -->
+        
+        <div class="col-12 background-presupuesto presupuesto">
+          <h4 class="presupuesto-titulo">SOLICITE SU PRESUPUESTO</h4>
+          <!-- Note: A custom script is used to activate validation:
+
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+              }, false)
+            })
+          -->
+          <form class="fila-presupuesto g-3 needs-validation" novalidate="">
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip01" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="validationTooltip01" value="" required="">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip02" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="validationTooltip02" value="" required="">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltipUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required="">
+                <div class="invalid-tooltip">
+                  Please choose a unique and valid username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="validationTooltip03" class="form-label">Pais</label>
+              <input type="text" class="form-control" id="validationTooltip03" required="">
+              <div class="invalid-tooltip">
+                Please provide a valid Pais.
+              </div>
+            </div>
+            <div class="col-md-3 position-relative">
+              <label for="validationTooltip04" class="form-label">Ciudad</label>
+              <select class="form-select" id="validationTooltip04" required="">
+                <option selected="" disabled="" value="">Elegir...</option>
+                <option>...</option>
+              </select>
+              <div class="invalid-tooltip">
+                Please select a valid Ciudad.
+              </div>
+            </div>
+            <div class="col-12 boton-presupuesto">
+              <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      </article>
+
       <!-- CARRUSEL -->
-      <section class="row-carrusel">
+<!--       <section class="row-carrusel">
         <div class="col-12">
           <div id="carouselWithCaptions" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
@@ -103,11 +251,11 @@
             </a>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- CONTENIDO -->
 
-      <section class="row">
+<!--       <section class="row">
         <main class="col-8 background-aplicacion">
           <h1 class="aplicacion-titulo">APLICACION</h1>
           <p class="aplicacion-contenido">
@@ -144,10 +292,10 @@
         <aside class="col-4 background-presupuesto d-flex justify-content-center">
           <h1 class="presupuesto-titulo">SOLICITE SU PRESUPUESTO</h1>
         </aside>
-      </section>
+      </section> -->
 
       <!-- FOOTER -->
-      <footer class="row background-footer">
+      <footer class="row background-footer footer">
         <div class="col-4">
           <h5 class="redes-titulo">REDES SOCIALES</h5>
           <div class="redes-logo">
@@ -202,10 +350,19 @@
 
         <div class="col-4">
           <div class="formulario-texto">
-            <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
-            <p class="formulario-contenido">
-              Envianos un mail y nos pondremos en contacto
-            </p>
+            <div>
+              <h5 class="formulario-titulo">TRABAJA CON NOSOTROS</h5>
+            </div>
+            <div class="form-texto">
+              <p class="formulario-contenido">
+                Envianos un mail y nos pondremos en contacto
+              </p>
+            </div>
+            <div class="form-input">
+              <label for="formControlInput" class="form-label"></label>
+              <input type="email" class="form-control" id="formControlInput" placeholder="name@example.com">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
       </footer>
