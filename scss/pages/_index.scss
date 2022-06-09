@@ -2,6 +2,7 @@
 @import "../components/_navbar";
 @import "../components/footer";
 
+
     /* CARRUSEL */
     
     .carousel-inner{
@@ -20,7 +21,22 @@
     .carrusel-p{
         font-size: 20px;
     }
+
+    .btn-carrusel{
+        background-color: $lightgreen;
+        color: white;
+        padding: 10px;
+        margin: 10px 0px 20px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
     
+    .btn-carrusel:hover{
+        background-color: white;
+        color: $lightgreen;
+    }
+
     /* CONTENIDO */
     
     .background-aplicacion{

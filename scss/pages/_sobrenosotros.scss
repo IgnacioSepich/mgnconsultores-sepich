@@ -11,6 +11,8 @@
     width: 100vw;
     height: 30vh;
     object-fit: cover;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 
 .empresa-titulo{
